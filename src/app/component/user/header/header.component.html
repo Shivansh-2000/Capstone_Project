@@ -1,0 +1,30 @@
+<!-- <p>header works!</p> -->
+
+<header>
+    <nav>
+        <input type="checkbox" id="click">
+        <label for="click" class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <div class="logo">
+            <a class="navbar-brand" routerLink="home"><span class="digi">Digi</span><span>Store</span></a>
+        </div>
+        <ul>
+            <li><a class="nav-link" id="nav-link" routerLink="/home">Home</a></li>
+            <li><a class="nav-link" id="nav-link" routerLink="/product">Products</a></li>
+            <li><a class="nav-link" id="nav-link" routerLink="/about">About Us</a></li>
+            <li><a class="nav-link" id="nav-link" routerLink="/contact">Contact Us</a></li>
+        </ul>
+        <!-- userlogin -->
+        <div class="log">
+            <a routerLink='/UserLogin'><i class="fas fa-user"></i></a>
+        </div>
+        <!-- cart icon -->
+        <div class="cart">
+            <button class="btn"> <i routerLink="/cart" class="fas fa-cart-plus"></i>
+                <!-- will get number of items in cart -->
+            <div  class="badge"> {{totalItem}}</div>
+            </button>
+        </div>
+    </nav>
+</header>

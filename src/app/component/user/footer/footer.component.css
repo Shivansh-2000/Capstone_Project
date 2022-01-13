@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* mainDiv */
+
+.foot {
+    background-color: rgb(179, 178, 178);
+    border-radius: 20px;
+    justify-content: space-between;
+    box-shadow: 2px 2px 3px #3b3b3b;
+    line-height: 20px;
+}
+
+
+/* in main div p tag hover effect*/
+
+.foot p:hover {
+    text-shadow: 1px 1px 2px #6b6b6b;
+}
+
+
+/* copyright text */
+
+.center {
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 3%;
+    margin-left: 5%;
+    width: max-content;
+}
+
+
+/* in main div all a tag */
+
+.foot a {
+    text-decoration: none;
+}
+
+
+/* social media icon div */
+
+.social {
+    margin-right: 6%;
+}
+
+.social h4 {
+    font-size: 1.20rem;
+    font-weight: 500;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.social .handles {
+    letter-spacing: 0.90rem;
+}
+
+
+/* social media handles icon */
+
+.handles .fa {
+    font-size: 24px;
+    background: -webkit-linear-gradient(#fc6247, #353fd2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* respective social media handles icon hover effect*/
+
+i:hover {
+    transform: scale(1.4);
+}
+
+
+/* admin */
+
+.admin {
+    margin-top: 1%;
+}
+
+.admin a {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: black;
+}
+
+@media (max-width: 780px) {
+    .handles .fa{
+        font-size: 20px;
+    }
+    .center,p{
+        font-size: 0.95rem;
+    }
+}
+@media (max-width: 580px) {
+    .handles{
+        letter-spacing: normal;
+    }
+    .handles .fa{
+        font-size: 15px;
+    }
+    .center,p,h4{
+        font-size: 0.55rem;
+    }
+
+}

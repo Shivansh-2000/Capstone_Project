@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.banner {
+    position: relative;
+    width: 90%;
+    height: 50%;
+    margin: 0 auto;
+}
+.banner img {
+    width: 100%;
+    border-radius: 20px;
+}
+.a-heading {
+    color: rgb(0, 0, 0);
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px #424242;
+}
+.a-heading:hover {
+    text-shadow: 4px 4px 6px #424242;
+}
+.b-heading {
+    color: #2E89F1;
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px #424242;
+}
+
+.b-heading:hover {
+    text-shadow: 4px 4px 6px #424242;
+}
+
+.c-heading {
+    color: white;
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px #424242;
+}
+
+.c-heading:hover {
+    text-shadow: 4px 4px 6px #424242;
+}
+
+.banner .btn {
+    position: absolute;
+    /* width: 10%; */
+    top: 43%;
+    left: 46%;
+    border: none;
+    color: #fff;
+    background-color: #2E89F1;
+    padding: .24rem;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    box-shadow: 2px 2px 5px #424242;
+}
+.review{
+    background: rgb(240,188,188);
+    background: radial-gradient(circle, rgba(240,188,188,1) 0%, rgba(156,209,224,1) 100%);
+    border-radius: 40px;
+    margin-top: 5%;
+    padding: 10px 10px ;
+}
+.review .head1{
+    font-size: 2.75rem;
+    font-weight: 500;
+    margin-top: 1%;
+    margin-left: 35%;
+}
+.review .head2{
+    font-size: 1.25rem;
+    margin-left: 45%;
+}
+.team-card{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    margin-top: 60px;
+}
+.card{
+    width: 50%;
+    background-color: #fafafa;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 20px;
+}
+.card:hover{
+    background-color:lightgray;
+    transition: 0.3s;
+}
+.team-card .card .img-section img{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 4px solid rgb(27, 27, 27);
+}
+.team-card .card .content{
+    width: 100%;
+    text-align: center;
+}
+.team-card .card .content h3{
+    font-size: 27px;
+    margin-top: 10px;
+    letter-spacing: 1.5px;
+    color: #639ab8;
+}
+.team-card .card .content h4{
+    font-size: 17px;
+    margin-top: 10px;
+    letter-spacing: 1.5px;
+    color: #6e6e6e;
+}
+.team-card .card .content p{
+    font-size: 15px;
+    margin: 6px 0px;
+    line-height: 1.1;
+    color: #6c6c6c;
+}
+@media only screen and (max-width: 1300px) {
+    .a-heading,
+    .b-heading,
+    .c-heading {
+        font-size: 2.75rem;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .a-heading,
+    .b-heading,
+    .c-heading {
+        font-size: 2.5rem;
+    }
+}
+
+@media only screen and (max-width: 920px) {
+    .a-heading,
+    .b-heading,
+    .c-heading {
+        font-size: 2.2rem;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .a-heading,
+    .b-heading,
+    .c-heading {
+        font-size: 2rem;
+    }
+    .btn {
+        font-size: 0.75rem;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .a-heading,
+    .b-heading,
+    .c-heading {
+        font-size: 1.75rem;
+    }
+    button {
+        font-size: 0.75rem !important;
+        font-weight: 200;
+        width: 13%;
+        left: 42% !important;
+    }
+    .team-card{
+        width: 100%;
+        display: block;
+        margin-left: 30%;
+    }
+    .card{
+        margin-bottom: 2%;
+    }
+    .review .head1{
+        font-size: 2.35rem;
+        font-weight: 500;
+        margin-left: 30%;
+    }
+    .review .head2{
+        font-size: 1.05rem;
+        margin-left: 35%;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .a-heading,
+    .b-heading,
+    .c-heading {
+        font-size: 1.53rem;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .a-heading,
+    .b-heading,
+    .c-heading {
+        font-size: 1.25rem;
+    }
+}
+@media only screen and (max-width: 450px) {
+    .a-heading,
+    .b-heading,
+    .c-heading {
+        margin-top: 1% !important;
+        font-size: 1.05rem;
+    }
+    button{
+        font-size: 0.55rem !important;
+        font-weight: normal;
+        
+        width: 14%;
+        left: 42% !important;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .a-heading,
+    .b-heading,
+    .c-heading {
+        margin-top: 1% !important;
+        font-size: 0.75rem;
+    }
+    button{
+        font-size: 0.25rem !important;
+        font-weight: normal;
+        
+        width: 14%;
+        left: 42% !important;
+    }
+}

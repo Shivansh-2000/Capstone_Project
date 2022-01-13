@@ -1,0 +1,50 @@
+<app-header></app-header>
+<!-- <p>product works!</p> -->
+
+<div class="container">
+    <h1 class="heading">Product List</h1>
+    <div>
+        <!-- search box -->
+        <form class="d-flex">
+            <input class="form-control me-2" type="search"  placeholder="Search" aria-label="Search" [(ngModel)]="searchTerm" (keyup)="search($event)" [ngModelOptions]="{standalone: true}">
+            <button class="submit" type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+    <div class="row">
+        <div class="cat">
+            <div class="container d-flex">
+                <!-- <div class="item" *ngFor="let item of filterCategory | searchKey:'title'"> -->
+                    <!-- <a (click)="filter('')"> -->
+                        <!-- <p class="category">All Products</p> -->
+                        <!-- <p class="category">{{item.category}}</p> -->
+                    <!-- </a> -->
+                <!-- </div> -->
+                <!-- will get categories data from api/database -->
+                <div class="item">
+                    <!-- *ngFor="let item of productList -->
+                    <!-- <a (click)="filter('{{item.catName}}')"> -->
+                        <!-- <p class="fil">{{item.catName}}</p> -->
+                    <!-- </a> -->
+                </div>
+            </div>
+        </div>
+
+        <ng-container *ngFor="let item of productList" >
+            <!-- *ngFor="let item of filterCategory | stringProduct: searchKey:'title'" -->
+            <div class="card col-md-3">
+                <!-- getting data from database/api -->
+                <img src="{{item.image}}" alt="">
+                <div class="card-body">
+                    <h4 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;"><b>{{item.productName}}</b></h4>
+                    <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.productDescription}}</p>
+                    <p><B>Price:</B> {{item.productPrice | currency:'INR'}}</p>
+                    <button class="btn btn-primary" (click)=addtocart(item)>Add to cart</button>
+                    
+                </div>
+            </div>
+        </ng-container>
+
+    </div>
+</div>
+
+

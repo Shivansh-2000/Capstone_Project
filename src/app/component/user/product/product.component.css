@@ -1,0 +1,87 @@
+
+.heading {
+    margin-top: 3%;
+    text-align: center;
+    font-size: 2.5rem;
+}
+.heading:hover {
+    text-shadow: 2px 2px 4px rgb(39, 39, 39);
+}
+.category{
+    background-color: #819fc2;
+    border: 2px solid #2E89F1;
+    border-radius: 5px;
+    /* margin: 3px 3px ; */
+    padding: 3px 3px;
+    cursor: pointer;
+    /* width: fit-content; */
+}
+.category:hover{
+    color: #fff;
+    box-shadow: 4px 4px 8px rgb(77, 76, 76);
+}
+.container {
+    margin: auto;
+}
+
+.card {
+    margin: 3%;
+    padding: 1%;
+    overflow: hidden;
+}
+
+.card:hover {
+    box-shadow: 3px 3px 6px rgb(39, 39, 39);
+}
+
+.card b {
+    margin-right: 5px;
+}
+
+.card img {
+    width: 80%;
+    height: 180px;
+    margin-left: 1rem;
+    margin-bottom: 0.75rem;
+    transition: 0.3s ease-in-out;
+}
+
+.card img:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+}
+
+.card button {
+    margin-left: 4%;
+    width: 90%;
+    background-color: #2E89F1;
+}
+
+.card button:hover {
+    background-color: #2E89F1;
+    box-shadow: 2px 2px 4px rgb(39, 39, 39);
+}
+.card-top {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: .25rem;
+}
+
+.item img {
+    width: 64px;
+}
+
+.item {
+    margin: 0px 15px;
+    text-align: center;
+}
+
+.item a:hover {
+    color: blue;
+}

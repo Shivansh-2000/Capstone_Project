@@ -1,0 +1,6 @@
+h1{
+    text-align: center;
+}
+h1:hover{
+    text-shadow: 3px 3px 9px rgb(71, 71, 71);
+}

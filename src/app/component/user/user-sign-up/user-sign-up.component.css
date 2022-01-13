@@ -1,0 +1,19 @@
+
+.card{
+    /* margin-top: 10px; */
+    border: none;
+    width: 500px;
+    padding: 40px;
+    position: absolute;
+    /* top: 50%; */
+    left: 50%;
+    transform: translate(-50%,5%);
+    background: rgb(240,188,188);
+    background: radial-gradient(circle, rgba(240,188,188,1) 0%, rgba(156,209,224,1) 100%); 
+}
+a{
+    cursor: pointer;
+}
+a:hover{
+    text-shadow: 2px 2px 4px rgb(41, 41, 41);;
+}

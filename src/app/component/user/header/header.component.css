@@ -1,0 +1,170 @@
+/* google font for logo*/
+@import url('https://fonts.googleapis.com/css2?family=Pushster&display=swap');
+span {
+    font-size: 2.25rem;
+    font-family: 'Pushster';
+    color: #000;
+}
+/* for logo digi word */
+.digi {
+    color: #2E89F1;
+}
+
+nav{
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: #ecebeb;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  box-shadow: 2px 2px 5px rgb(85, 85, 85);
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+  margin-top: 1%;
+}
+nav ul li a{
+  color: #131313;
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 500;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a:hover{
+  color: #2E89F1;
+}
+nav .menu-btn i{
+  color: rgb(14, 13, 13);
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+.badge {
+    background-color: #2E89F1;
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px rgb(71, 71, 71);
+}
+.submit {
+    font-size: 1.15rem;
+    border: none;
+}
+.submit:hover {
+    /* background-color: #2E89F1; */
+    color: #2E89F1;
+    border-radius: 40%;
+}
+.cart i{
+    font-size: 1.75rem;
+}
+.fixed {
+    position: fixed;
+    width: 100%;
+    transition: 0.2s linear;
+    top: 0px;
+    z-index: 1;
+    box-shadow: 0 2px 10px rgb(27, 27, 27);
+}
+/* if not fixed then style */
+.nofixed {
+    position: static;
+    transition: 0.2s linear;
+    top: -50px;
+}
+.log{
+  background-color: #c2c1c1;
+  padding: 6px 6px;
+   border-radius: 50%;
+   font-size: 1.1rem;
+}
+.log i{
+  cursor: pointer;
+  width: fit-content;
+}
+.modal{
+  text-align: center;
+}
+
+.modal label{
+  margin-top: 2%;
+  width: 23%;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}
+.modal input[type=text],input[type=password]{
+  width: 50%;    
+  padding: 10px;   
+  background-color: beige;
+  border: 2px solid grey;
+  border-radius: 20px;
+  box-sizing: border-box;    
+ }
+
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: rgb(196, 195, 195);
+    height: 100vh;
+    width: 60%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+    z-index: 10;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+      color: #131313;
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+}
+@media (max-width: 620px) {
+  span{
+    font-size: 1.55rem;
+  }
+  form input{
+    width: 30px;
+    font-size: 10px;
+  }
+  .cart i{
+    font-size: 1.25rem;
+}
+.badge{
+  font-size: 10px;
+}
+}

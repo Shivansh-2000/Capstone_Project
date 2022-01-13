@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* full-page */
+.contact-page{
+    background-size: cover;
+   border-radius: 40px;
+}
+/* heading */
+.heading{
+    margin-left: 42%;
+}
+.heading h1{
+    /* background-color: #45d6e9; */
+    margin: 5px 5px;
+    padding: 5px 5px;
+    width: fit-content;
+   font-size: 2.75rem;
+   font-weight: 600;
+}
+.heading .quatation{
+    font-size: 1.35rem;
+    margin-left: 3%;
+    color: gray;
+}
+.heading h1:hover{
+    transform: scale(1.1);
+}
+.heading h6:hover{
+    color: black;
+}
+
+/* both section */
+
+.contact-section{
+    display: flex;
+}
+/* contact information */
+.contact-info{
+    width: 38%;
+    text-align: center;
+  
+}
+.contact-info .text{
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 50%;
+    background-color: rgba(222, 184, 135, 0.79);
+    
+}
+.contact-info .text h3{
+    font-size: 1.3rem;
+}
+.contact-info .text a{
+    font-size: 1rem;
+    text-decoration: none;
+}
+.contact-info .text:hover{
+    background-color: rgba(222, 184, 135, 1);
+}
+.contact-info .text i{
+    margin: 4px;
+}
+
+/* form for contact */
+.contact-form{
+    margin: 20px;
+  width: 100%;
+  padding: 25px;  
+  margin-top: 0;
+    background-color: rgba(223, 245, 245, 0.418);
+    border-radius: 30px;
+}
+.contact-form:hover{
+    background-color: rgba(223, 245, 245, 0.87);
+}
+.info{
+    margin: 5px 5px;
+    padding: 5px 5px ;
+    display: flex;
+}
+.info label{
+    margin-top: 2%;
+    width: 23%;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+}
+label sup{
+    color: red;
+}
+.info input[type=text],textarea{
+ width: 399px;    
+ padding: 10px;   
+ background-color: beige;
+ border: 2px solid grey;
+ border-radius: 20px;
+ box-sizing: border-box;    
+}
+
+
+.info textarea{
+    margin-left: 15px;
+}
+.info .error{
+    color: rgb(158, 7, 7);
+}
+.info .valid{
+    color: rgb(41, 185, 28);
+}
+.info button{
+    width: 120px;
+    background: #45d6e9;
+    color: rgb(46, 46, 46);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 4px solid black;
+}
+.info button:hover{
+    background-color: #3e97a3;
+}
+
+
+@media (max-width: 990px) {
+   .contact-section{
+    display: block;
+   }
+   .contact-info{
+       width: 70%;
+       margin: auto;
+   }
+    }
+@media (max-width: 650px) {
+    .heading{
+        margin-left: 38%;
+    }
+}
+@media (max-width: 590px) {
+   .heading{
+    margin-left: 40%;
+   }
+   .heading h1{
+       font-size: 1.75rem;
+   }
+   .heading .quatation{
+    font-size: 0.95rem;
+   }
+   .contact-info{
+       width: 70%;
+       margin: auto;
+   }
+   .info input[type=text],textarea{
+    width: 350px;
+    padding: 8px;
+    font-size: 10px;
+    }
+    .info{
+        display: block;
+    }
+    .info label{
+        width: 100%;
+        font-size: 1rem;
+    }
+    }

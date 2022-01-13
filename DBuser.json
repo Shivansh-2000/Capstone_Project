@@ -1,0 +1,36 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "fullName": null,
+      "email": null,
+      "phoneNo": null
+    }
+  ],
+  "signup": [
+    {
+      "fullname": "Shivansh Sharma",
+      "email": "shivansh@gmail.com",
+      "phone": 7710352296,
+      "password": "shivansh",
+      "id": 1
+    },
+    {
+      "fullname": "kajal",
+      "email": "kajal@gmail.com",
+      "phone": 123456789,
+      "password": "kajal",
+      "id": 2
+    },
+    {
+      "fullname": "deep",
+      "email": "deep@gmail.com",
+      "phone": 9878987865,
+      "password": "deep@123",
+      "id": 3
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

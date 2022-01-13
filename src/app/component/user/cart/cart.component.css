@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: auto;
+}
+
+.card {
+    height: 60vh;
+    margin: 25px;
+    padding: 25px;
+}
+
+.card h5 {
+    font-size: 30px;
+}
+
+.card h4 {
+    font-size: 26px;
+    font-weight: 400;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.center img {
+    color: inherit;
+    border: none;
+    outline: none;
+    height: 162px;
+    width: 250px;
+    margin: 20px;
+}
+
+button {
+    box-shadow: 2px 2px 3px rgb(75, 74, 74);
+    border-radius: 5px;
+}
+
+button:hover {
+    box-shadow: 4px 4px 6px rgb(75, 74, 74);
+}
+
+td .btn {
+    background-color: rgb(184, 28, 28);
+    padding: 3px 5px;
+}
+
+.shopNow {
+    background-color: #2E89F1;
+    width: 8rem;
+    border: none;
+    outline: none;
+    padding: 5px 5px;
+}
+
+td .empty {
+    width: 5rem;
+    padding: 3px 3px;
+    width: fit-content;
+}
+
+td .success {
+    background-color: rgb(19, 153, 48);
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 3px 5px;
+}
+
+.card-table {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: none;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.25rem;
+}
+.center h4{
+    font-size: 1.25rem;
+}
+.center h5{
+    font-size: 1rem;
+}
+.center h4:hover,h5:hover{
+    text-shadow: 4px 4px 8px rgb(90, 90, 90);
+}
+.center .btn {
+    font-size: 1.1rem !important;
+    padding: 2px 7px;
+    border-radius: 3px !important;
+}
+
+.data {
+    width: 12%;
+}
+
+.description {
+    width: 30%;
+}
+
+.name {
+    width: 12%;
+}
+
+.order-form {
+    margin: auto;
+    top: 50%;
+    left: 50%;
+}
+
+.modal-conten {
+    width: 100%;
+    margin: 5px 5px;
+    padding: 5px 5px;
+}
+@media (max-width: 790px){
+    .table{
+        display: block;
+    }
+}

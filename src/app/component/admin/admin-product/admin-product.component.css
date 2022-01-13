@@ -1,0 +1,36 @@
+
+.container{
+    margin: auto;
+     
+ }
+ h3{
+     font-size: 1.55rem;
+     margin-left: 2%;
+     margin-top: 1%;
+ }
+ .nav{
+     position: relative;
+ }
+ button{
+     width: 140px;
+     margin-right: 4%;
+ }
+ .navbar{
+     display: flex;
+ }
+ .count{
+     background: rgb(240,188,188);
+ background: radial-gradient(circle, rgba(240,188,188,1) 0%, rgba(156,209,224,1) 100%);
+     width: 15%;
+     margin-left: 20%;
+     position: relative;
+     top: -95%;
+     text-align: center;
+     border-radius: 40px;
+ }
+ .count h3{
+     font-size: 1.25rem;
+ }
+ .count p{
+     font-size: 1.15rem;
+ }

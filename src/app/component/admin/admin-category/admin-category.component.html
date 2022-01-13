@@ -1,0 +1,77 @@
+<app-nav-bar></app-nav-bar>
+<br>
+<div class="main">
+    <div class="container">
+        <div class="crud">
+            <h1> Category</h1>
+            <div class="count">
+                <!-- <h3>Total Products</h3> -->
+            </div>
+            <nav class="navbar navbar-light bg-primary">
+                <div class="container-fluid">
+                    <h3 style="color: aliceblue;">Category List</h3>
+
+                    <div class="d-flex">
+                        
+                        <button (click)="clickAddCategory()" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn btn-success">Add Category</button>
+
+                    </div>
+                </div>
+            </nav>
+            <br>
+            <div class="table table-responsive-md">
+                <table class="table  mt-3 text-center">
+                    <thead>
+                        <!-- table heading -->
+                        <tr>
+                            <th scope="col">Category ID</th>
+                            <th scope="col">Category Name</th>
+                       </tr>
+                    </thead>
+                    <tbody>
+                        <!-- data will be fetch from the api/database -->
+                        <tr *ngFor="let row of categoryData">
+                            <td>{{row.id}}</td>
+                            <td>{{row.catName}}</td>
+                          
+                            <td>
+                                <button type="button"(click)="onEdit(row)" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn btn-info"><i
+                                    class="fas fa-edit"></i></button>
+                                <button (click)="deleteCategory(row)" type="button" class="btn btn-danger"><i
+                                    class="fas fa-trash-alt"></i></button>
+                            </td>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Add Category</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form [formGroup]="formValue">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Category Name</label>
+                    <input type="text" class="form-control" placeholder="Category Name" formControlName="catName"
+                        id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button id="cancel"  type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button (click)="postCategoryDetail()" *ngIf="showAdd" type="button" class="btn btn-primary">Add </button>
+          <button (click)="UpdateCategoryDetail()" *ngIf="showUpdate" type="button" class="btn btn-primary">Update </button>
+        </div>
+      </div> 
+    </div>
+  </div>

@@ -1,0 +1,79 @@
+<app-nav-bar></app-nav-bar>
+<br>
+<div class="main">
+    <div class="container">
+        <div class="crud">
+            <h1>Admin Profile</h1>
+            <div class="count"></div>
+            <nav class="navbar navbar-light bg-primary">
+                <div class="container-fluid">
+                    <h2 style="color: aliceblue;">Admin List</h2>
+                    <div class="d-flex">
+                        <button (click)="clickAddAdmin()" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn btn-success">Add Admin</button>
+                        </div>
+                </div>
+            </nav>
+            <br>
+            <div class="table table-responsive-md">
+                <table class="table mt-3">
+                    <thead>
+                        <tr>
+                            <th scope="col">Admin Id</th>
+                            <th scope="col">Admin email Id</th>
+                            <th scope="col">Password</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let admin of adminProfileData">
+                            <td>{{admin.id}}</td>
+                            <td>{{admin.adminEmail}}</td>
+                            <td>{{admin.adminPassword}}</td>
+                            
+                            <td>
+                                
+                                <button (click)="onEdit(admin)" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn btn-info"><i
+                                    class="fas fa-edit"></i></button>
+                                    
+                                <button (click)="deleteAdmin(admin)" type="button" class="btn btn-danger"><i
+                                    class="fas fa-trash-alt"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Add Admin Profile</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form [formGroup]="formValue">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Admin Email</label>
+                    <input type="text" class="form-control" placeholder="Email" formControlName="adminEmail"
+                        id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Password</label>
+                    <input type="password" class="form-control" placeholder="Password" formControlName="adminPassword"
+                        id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button id="cancel"  type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button (click)="UpdateAdminDetail()" *ngIf="showUpdate" type="button" class="btn btn-primary">Update </button>
+            <button (click)="postAdminDetail()" *ngIf="showAdd" type="button" class="btn btn-primary">Add </button>
+               
+          </div>
+      </div>
+    </div>
+  </div>
