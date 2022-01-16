@@ -1,0 +1,40 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "image": "https://cdn.shopify.com/s/files/1/0415/7846/3390/products/mukut-front-brake-disc-caliper-for-honda-shine-new-135_1024x.jpg?v=1631362057",
+      "productName": "Brake",
+      "productDescription": "brake",
+      "catName": "brake",
+      "productPrice": "2345"
+    },
+    {
+      "id": 2,
+      "image": "https://i.pinimg.com/originals/db/62/5e/db625e03827d9918847c53c7fce2b3ba.jpg",
+      "productName": "Body",
+      "productDescription": "Body",
+      "catName": "Bike Body Parts",
+      "productPrice": "200"
+    },
+    {
+      "id": 3,
+      "image": "https://www.mahle.com/media/global/press/press-pictures/products/mahle-klimageraet-fuer-pkw_textimage.jpg",
+      "productName": "Air Conditioning",
+      "productDescription": "Air conditioning",
+      "catName": "Air conditioning",
+      "productPrice": "300"
+    },
+    {
+      "id": 4,
+      "image": "https://rukminim1.flixcart.com/image/416/416/jw84ya80/bike-exhaust-system/u/7/z/universal-high-quality-high-performance-2-pipe-trp-traders-original-imafdk6pebvdmbfc.jpeg?q=70",
+      "productName": "Exhaust",
+      "productDescription": "Exhaust System",
+      "catName": "Exhaust System",
+      "productPrice": "5000"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

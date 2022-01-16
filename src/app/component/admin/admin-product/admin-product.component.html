@@ -1,21 +1,20 @@
 <app-nav-bar></app-nav-bar>
 <br>
 <div class="main">
-    <!-- <p>product works!</p> -->
     <div class="container">
+        <div class="count">
+            <!-- <h3>Total Products</h3> -->
+            <!-- <p>{{totalItem}}</p> -->
+        </div>
         <div class="crud">
-            <!-- <p>showproduct works!</p> -->
-            <div class="count">
-                <h3>Total Products</h3>
-                <!-- <p>{{totalItem}}</p> -->
-            </div>
+            
             <nav class="navbar navbar-light bg-primary">
                 <div class="container-fluid">
                     <h3 style="color: aliceblue;">Products List</h3>
 
                     <div class="d-flex">
                         
-                        <button (click)="clickAddProduct()" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn btn-success">Add Product</button>
+                        <button (click)="clickAddProduct()" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="Addbtn btn-success">Add Product</button>
 
                     </div>
                 </div>
@@ -29,8 +28,8 @@
                             <th scope="col">Product ID</th>
                             <th scope="col">Product Image</th>
                             <th scope="col">Product Name</th>
-                            <th scope="col">Category</th>
                             <th scope="col">Product Decription</th>
+                            <th scope="col">Category</th>
                             <th scope="col">Price</th>
                             <th scope="col">Action</th>
                         </tr>
@@ -39,35 +38,18 @@
                         <!-- data will be fetch from the api/database -->
                         <tr *ngFor="let item of productData">
                             <td>{{item.id}}</td>
-                            <td>{{item.image}}</td>
+                            <td><img style="width: 60px;"src="{{item.image}}" alt="{{item.productName}}"></td>
                             <td>{{item.productName}}</td>
                             <td>{{item.productDescription}}</td>
-                            <td>{{item.category}}</td>
-                            <td>{{item.productPrice}}</td>
+                            <td>{{item.catName}}</td>
+                            <td>{{item.productPrice  | currency:'INR'}}</td>
                             <td>
                                 <button type="button"(click)="onEdit(item)" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn btn-info"><i
                                     class="fas fa-edit"></i></button>
                                 <button (click)="deleteProduct(item)" type="button" class="btn btn-danger"><i
                                     class="fas fa-trash-alt"></i></button>
                             </td>
-                            
                         </tr>
-                        <!-- <tr *ngFor="let item of filterCategory | stringProduct: searchKey:'title'">
-                            <td>{{item.productId}}</td>
-                            <td><img style="width: 120px;" src="{{item.image}}" alt="Product image"></td>
-                            <td>{{item.productName}}</td>
-                            <td>{{item.catName}}</td>
-                            <td>{{item.productDescription}}</td>
-                            <td>{{item.productPrice | currency:'INR'}}</td>
-
-                            <td>
-                                <button style="color: aliceblue;" type="button" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal" class="btn btn-info"><i
-                                        class="fas fa-edit"></i></button>
-                                <button (click)="deleteProduct(item)" class="btn btn-danger mx-2"><i
-                                        class="fas fa-trash-alt"></i></button>
-                            </td>
-                        </tr> -->
                     </tbody>
                 </table>
             </div>
@@ -88,30 +70,31 @@
             <form [formGroup]="formValue">
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Product Url</label>
-                    <input type="text" class="form-control" placeholder="Image url" formControlName="productUrl"
+                    <input type="text" class="form-control" placeholder="Image url" formControlName="image"
                         id="exampleInputEmail1" aria-describedby="emailHelp">
-
+                        <small><span class="text-danger" *ngIf="formValue.controls['image'].dirty && formValue.hasError('required','image')">*Product url is required</span></small>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail2" class="form-label">Product Name</label>
                     <input type="text" class="form-control" placeholder="Product Name" formControlName="productName"
                         id="exampleInputEmail2" aria-describedby="emailHelp">
-
+                       <small> <span class="text-danger" *ngIf="formValue.controls['productName'].dirty && formValue.hasError('required','productName')">*Product Name is required</span></small>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Product Description</label>
                     <input type="text" class="form-control" formControlName="productDescription" placeholder="Product Description" id="exampleInputPassword1">
-                   
+                    <small><span class="text-danger" *ngIf="formValue.controls['productDescription'].dirty && formValue.hasError('required','productDescription')">*Product description is required</span></small>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Product Category</label>
-                    <input type="email" class="form-control" placeholder="Catagories" formControlName="category" id="exampleInputPassword1">
+                    <input type="email" class="form-control" placeholder="Catagories" formControlName="catName" id="exampleInputPassword1">
+                    <small><span class="text-danger" *ngIf="formValue.controls['catName'].dirty && formValue.hasError('required','catName')">*Category is required</span></small>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Product Price</label>
                     <input type="text" class="form-control" placeholder="Price" formControlName="productPrice" id="exampleInputPassword1">
+                    <small><span class="text-danger" *ngIf="formValue.controls['productPrice'].dirty && formValue.hasError('required','productPrice')">*Product price is required</span></small>
                 </div>
-
             </form>
         </div>
         <div class="modal-footer">

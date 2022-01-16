@@ -3,6 +3,6 @@ export class ProductModel{
     image : string = '';
     productName : string = '';
     productDescription : string = '';
-    category : string = '';
+    catName : string = '';
     productPrice : string = '';
 }

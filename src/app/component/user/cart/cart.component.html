@@ -12,8 +12,6 @@
                             <th>Product Image</th>
                             <th>Description</th>
                             <th>Price</th>
-                            <th>Quantity</th>
-                            <th>Total</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -24,8 +22,6 @@
                             <td><img style="width: 120px;" src="{{item.image}}" alt=""></td>
                             <td class="description">{{item.productDescription}}</td>
                             <td class="data">{{item.productPrice | currency:'INR'}}</td>
-                            <td class="data">{{item.quantity}}</td>
-                            <td class="data">{{item.total | currency:'INR'}}</td>
                             <td>
                                 <button (click)="removeItem(item)" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
                             </td>

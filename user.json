@@ -1,0 +1,24 @@
+{
+  "posts": [
+    {
+      "userId": 2,
+      "FirstName": "Shivansh",
+      "LastName": "Sharma",
+      "Email": "shivansh@gmail.com",
+      "Password": "shivansh",
+      "id": 1
+    },
+    {
+      "userId": 2,
+      "FirstName": "Kajal",
+      "LastName": "Rajput",
+      "Email": "kajal@gmail.com",
+      "Password": "kajal",
+      "id": 2
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

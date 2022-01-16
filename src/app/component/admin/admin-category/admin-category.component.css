@@ -4,3 +4,18 @@ h1{
 h1:hover{
     text-shadow: 3px 3px 9px rgb(71, 71, 71);
 }
+.crud{
+    border: 1px solid #000;
+    box-shadow: 3px 3px 6px #4b4b4b;
+}
+.catbtn{
+    width: 120px;
+    border-radius: 5px;
+}
+button{
+    margin-right: 4%;
+    box-shadow: 2px 2px 5px #4b4b4b;
+}
+button:hover{
+    box-shadow: 4px 4px 10px #4b4b4b;
+}

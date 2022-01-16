@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ApiService } from 'src/app/Services/api.service';
-import { userProfileModel } from './userProfile.modulas';
+import {  UserModel} from 'src/app/models/User.module';
 
 @Component({
   selector: 'app-admin-user-profile',
@@ -11,7 +11,7 @@ import { userProfileModel } from './userProfile.modulas';
 export class AdminUserProfileComponent implements OnInit {
 
   formValue !: FormGroup;
-  userProfileModelObj : userProfileModel = new userProfileModel();
+  userProfileModelObj : UserModel = new UserModel();
   userProfileData !: any;
   showAdd !: boolean;
   showUpdate !: boolean;
@@ -19,10 +19,10 @@ export class AdminUserProfileComponent implements OnInit {
 
   ngOnInit(): void {
     this.formValue = this.formbuilder.group({
-      FirstName : [''],
-      LastName : [''],
-      Email : [''],
-      Password : [''],
+      FirstName : ['',[Validators.required]],
+      LastName : ['',[Validators.required]],
+      Email : ['',[Validators.required,Validators.email]],
+      Password : ['',[Validators.required,Validators.minLength(6)]],
     }) 
     this.getAllUser();
   }
@@ -59,7 +59,7 @@ export class AdminUserProfileComponent implements OnInit {
   }
 
   deleteUser(user:any){
-    this.api.deleteUser(user.userId)
+    this.api.deleteUser(user.id)
     .subscribe(res=>{
       alert("User Deleted");
       this.getAllUser();
@@ -71,9 +71,11 @@ export class AdminUserProfileComponent implements OnInit {
   onEdit(user : any){
     this.showAdd = false;
   this.showUpdate = true;
-    this.userProfileModelObj.userId = user.userId;
-    this.formValue.controls['userEmail'].setValue(user.userEmail);
-    this.formValue.controls['userPassword'].setValue(user.userPassword);
+    this.userProfileModelObj.userId = user.id;
+    this.formValue.controls['FirstName'].setValue(user.FirstName);
+    this.formValue.controls['LastName'].setValue(user.LastName);
+    this.formValue.controls['Email'].setValue(user.Email);
+    this.formValue.controls['Password'].setValue(user.Password);
   }
   UpdateUserDetail(){
     this.userProfileModelObj.FirstName = this.formValue.value.FirstName;

@@ -7,7 +7,6 @@ import {map} from 'rxjs/operators';
 export class ApiService {
 
   constructor(private http: HttpClient) { }
-
   
   //<---------product CRUD----------->
   //will get user from database
@@ -42,28 +41,28 @@ export class ApiService {
 
    //will get category data from database
    getCategory(){
-    return this.http.get<any>("http://localhost:8000/posts")
+    return this.http.get<any>("http://localhost:3000/posts")
     .pipe(map((res:any)=>{
       return res;
     }))
   }
   //will post data on server
   postCategory(data:any){
-    return this.http.post<any>("http://localhost:8000/posts",data)
+    return this.http.post<any>("http://localhost:3000/posts",data)
     .pipe(map((res:any)=>{
       return res;
     }))
   }
   //will edit data on server
   updateCategory(data : any,id: number){
-    return this.http.put<any>("http://localhost:8000/posts/"+id,data)
+    return this.http.put<any>("http://localhost:3000/posts/"+id,data)
     .pipe(map((res:any)=>{
       return res;
     }))
   }
   //will delete data from server
   deleteCategory(id:number){
-    return this.http.delete<any>("http://localhost:8000/posts/"+id)
+    return this.http.delete<any>("http://localhost:3000/posts/"+id)
     .pipe(map((res:any)=>{
       return res;
     }))
@@ -86,14 +85,14 @@ export class ApiService {
   }
   //will edit data on server
   updateUser(data : any,id: number){
-    return this.http.put<any>(" http://localhost:3000/posts/"+id,data)
+    return this.http.put<any>("http://localhost:3000/posts/"+id,data)
     .pipe(map((res:any)=>{
       return res;
     }))
   }
   //will delete data from server
   deleteUser(id:number){
-    return this.http.delete<any>(" http://localhost:3000/posts/"+id)
+    return this.http.delete<any>("http://localhost:3000/posts/"+id)
     .pipe(map((res:any)=>{
       return res;
     }))
@@ -143,6 +142,11 @@ postConatact(data: any){
 // user post
 signUp(empObj : any){
   return this.http.post<any>("http://localhost:3000/posts",empObj)
+}
+//  <------user log in------->
+// user login 
+login(empObj : any){
+  return this.http.get<any>("http://localhost:3000/posts",empObj)
 }
 
 

@@ -20,6 +20,7 @@ import { AdminLoginComponent } from './component/admin/admin-login/admin-login.c
 import { UserLoginComponent } from './component/user/user-login/user-login.component';
 import { FooterComponent } from './component/user/footer/footer.component';
 import { UserSignUpComponent } from './component/user/user-sign-up/user-sign-up.component';
+import { FilterPipe } from './filters/filter.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +38,8 @@ import { UserSignUpComponent } from './component/user/user-sign-up/user-sign-up.
     AdminLoginComponent,
     UserLoginComponent,
     FooterComponent,
-    UserSignUpComponent
+    UserSignUpComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

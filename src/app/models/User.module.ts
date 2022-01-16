@@ -1,7 +1,7 @@
 export class UserModel{
     userId !: number;
-    FirstName !: string;
-    LastName !: string;
     Email !: string;
     Password !: string;
+    FirstName !: string;
+    LastName !: string;
 }

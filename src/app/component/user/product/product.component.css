@@ -7,19 +7,6 @@
 .heading:hover {
     text-shadow: 2px 2px 4px rgb(39, 39, 39);
 }
-.category{
-    background-color: #819fc2;
-    border: 2px solid #2E89F1;
-    border-radius: 5px;
-    /* margin: 3px 3px ; */
-    padding: 3px 3px;
-    cursor: pointer;
-    /* width: fit-content; */
-}
-.category:hover{
-    color: #fff;
-    box-shadow: 4px 4px 8px rgb(77, 76, 76);
-}
 .container {
     margin: auto;
 }
@@ -72,16 +59,21 @@
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: .25rem;
 }
-
-.item img {
-    width: 64px;
-}
-
 .item {
-    margin: 0px 15px;
-    text-align: center;
+    justify-content: space-between;
 }
-
-.item a:hover {
-    color: blue;
+li{
+    cursor: pointer;
+}
+li:hover{
+    background-color: rgb(206, 203, 203);
+}
+.btn{
+    background-color: #2E89F1;
+    color: #fff;
+    margin-left: 10%;
+}
+.filter{
+    display: flex;
+    justify-content: space-between;
 }

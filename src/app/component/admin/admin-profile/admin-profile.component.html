@@ -2,14 +2,14 @@
 <br>
 <div class="main">
     <div class="container">
+        <h1>Admin Profile</h1>
+        <div class="count"></div>
         <div class="crud">
-            <h1>Admin Profile</h1>
-            <div class="count"></div>
             <nav class="navbar navbar-light bg-primary">
                 <div class="container-fluid">
                     <h2 style="color: aliceblue;">Admin List</h2>
                     <div class="d-flex">
-                        <button (click)="clickAddAdmin()" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn btn-success">Add Admin</button>
+                        <button (click)="clickAddAdmin()" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="adminbtn btn-success">Add Admin</button>
                         </div>
                 </div>
             </nav>
@@ -58,13 +58,15 @@
             <form [formGroup]="formValue">
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Admin Email</label>
-                    <input type="text" class="form-control" placeholder="Email" formControlName="adminEmail"
+                    <input type="text" class="form-control" placeholder="Email" formControlName="email"
                         id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <small><span class="text-danger" *ngIf="formValue.controls['email'].dirty && formValue.hasError('required','email')">*Email is required</span></small>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Password</label>
-                    <input type="password" class="form-control" placeholder="Password" formControlName="adminPassword"
+                    <input type="password" class="form-control" placeholder="Password" formControlName="password"
                         id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <small><span class="text-danger" *ngIf="formValue.controls['password'].dirty && formValue.hasError('required','password')">*Password is required</span></small>
                 </div>
             </form>
         </div>

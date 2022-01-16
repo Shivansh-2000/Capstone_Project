@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ApiService } from 'src/app/Services/api.service';
-import { ProductModel } from '../admin-product/product.model';
-import { categoryModel } from './category.model';
+import { categoryModel } from 'src/app/models/cat.module';
 
 @Component({
   selector: 'app-admin-category',
@@ -19,7 +18,7 @@ export class AdminCategoryComponent implements OnInit {
 
   ngOnInit(): void {
     this.formValue = this.formbuilder.group({
-      catName : [''],
+      catName : ['',[Validators.required]],
     }) 
     this.getAllCategory();
   }
@@ -54,8 +53,8 @@ export class AdminCategoryComponent implements OnInit {
     })
   }
 
-  deleteCategory(item:any){
-    this.api.deleteCategory(item.catId)
+  deleteCategory(row:any){
+    this.api.deleteCategory(row.id)
     .subscribe(res=>{
       alert("Category Deleted.")
       this.getAllCategory();
@@ -67,14 +66,14 @@ export class AdminCategoryComponent implements OnInit {
   onEdit(row : any){
     this.showAdd = false;
     this.showUpdate = true;
-    this.categoryModelObj.catId = row.catId;
+    this.categoryModelObj.id = row.id;
     this.formValue.controls['catName'].setValue(row.catName);
   }
 
   UpdateCategoryDetail(){
     this.categoryModelObj.catName = this.formValue.value.catName;
  
-    this.api.updateCategory(this.categoryModelObj,this.categoryModelObj.catId)
+    this.api.updateCategory(this.categoryModelObj,this.categoryModelObj.id)
     .subscribe(res=>{
       alert("Category Updated Successfully");
       let ref = document.getElementById('cancel');

@@ -10,7 +10,7 @@ import { CartService } from 'src/app/Services/cart.service';
 export class CartComponent implements OnInit {
   formValue !: FormGroup;
   public products : any =[];
-  public grandTotal : number =0;
+  public grandTotal : number = 0;
   constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
@@ -18,7 +18,7 @@ export class CartComponent implements OnInit {
     this.cartService.getProducts()
     .subscribe(res=>{
       this.products=res;
-      this.grandTotal =this.cartService.getTotalPrice();
+      this.grandTotal = this.cartService.getTotalPrice();
     })
   }
   removeItem(item: any){

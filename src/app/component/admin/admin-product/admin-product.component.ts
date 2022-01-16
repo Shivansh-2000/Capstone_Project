@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder,FormGroup} from '@angular/forms';
+import {FormBuilder,FormGroup, Validators} from '@angular/forms';
 import { ApiService } from 'src/app/Services/api.service';
-import { ProductModel } from './product.model';
+import { ProductModel } from 'src/app/models/product.module';
 
 @Component({
   selector: 'app-admin-product',
@@ -19,11 +19,11 @@ export class AdminProductComponent implements OnInit {
 
   ngOnInit(): void {
     this.formValue = this.formbuilder.group({
-      image : [''],
-      productName : [''],
-      productDescription : [''],
-      category : [''],
-      productPrice : ['']
+      image : ['',Validators.required],
+      productName : ['',[Validators.required]],
+      productDescription : ['',[Validators.required]],
+      catName : ['',Validators.required],
+      productPrice : ['',Validators.required]
     }) 
     this.getAllProduct();
   }
@@ -36,7 +36,7 @@ export class AdminProductComponent implements OnInit {
     this.productModelObj.image = this.formValue.value.image;
     this.productModelObj.productName = this.formValue.value.productName;
     this.productModelObj.productDescription = this.formValue.value.productDescription;
-    this.productModelObj.category = this.formValue.value.category;
+    this.productModelObj.catName = this.formValue.value.catName;
     this.productModelObj.productPrice = this.formValue.value.productPrice;
 
     this.api.postProduct(this.productModelObj)
@@ -78,7 +78,7 @@ export class AdminProductComponent implements OnInit {
     this.formValue.controls['image'].setValue(item.image);
     this.formValue.controls['productName'].setValue(item.productName);
     this.formValue.controls['productDescription'].setValue(item.productDescription);
-    this.formValue.controls['category'].setValue(item.category);
+    this.formValue.controls['catName'].setValue(item.catName);
     this.formValue.controls['productPrice'].setValue(item.productPrice);
   }
 
@@ -86,7 +86,7 @@ export class AdminProductComponent implements OnInit {
     this.productModelObj.image = this.formValue.value.image;
     this.productModelObj.productName = this.formValue.value.productName;
     this.productModelObj.productDescription = this.formValue.value.productDescription;
-    this.productModelObj.category = this.formValue.value.category;
+    this.productModelObj.catName = this.formValue.value.catName;
     this.productModelObj.productPrice = this.formValue.value.productPrice;
 
     this.api.updateProduct(this.productModelObj,this.productModelObj.id)
@@ -100,5 +100,5 @@ export class AdminProductComponent implements OnInit {
       alert("Something went wrong in updating product!")
     })
   }
-
+  
 }

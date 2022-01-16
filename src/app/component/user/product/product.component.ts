@@ -11,6 +11,7 @@ export class ProductComponent implements OnInit {
 
   filteredString :string ='';
   public productList : any;
+  public categorydata : any;
   public searchTerm : string ='';
   public filterCategory: any;
   searchKey:string="";
@@ -22,9 +23,10 @@ export class ProductComponent implements OnInit {
     .subscribe(res=>{
       this.productList = res;
       this.filterCategory = res;
-      this.productList.forEach((a:any)=>{
-        Object.assign(a,{quantity:1,total:a.price});
-      });
+      console.log(this.productList)
+    });
+    this.cartService.search.subscribe((val:any)=>{
+      this.searchKey = val;
     })
   }
   //will add item to cart
@@ -38,10 +40,10 @@ export class ProductComponent implements OnInit {
     this.cartService.search.next(this.searchTerm);
   }
 
-  filter(category:string){
+  filter(catName:string){
     this.filterCategory = this.productList
     .filter((a:any)=>{
-      if(a.category == category || category ==''){
+      if(a.catName == catName || catName ==''){
         return a;
       }
     })

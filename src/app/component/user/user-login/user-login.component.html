@@ -13,20 +13,21 @@
                 <form [formGroup]="loginForm" (ngSubmit)="login()">
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input formControlName="Email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        <input formControlName="Email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email Address">
+                        <div id="emailHelp" class="form-text"><small>We'll never share your email with anyone else.</small></div>
                         <span class="text-danger" *ngIf="loginForm.controls['Email'].dirty && loginForm.hasError('required','Email')">*Email Id is required</span>
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input formControlName="Password" type="password" class="form-control" id="exampleInputPassword1">
+                        <input formControlName="Password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                         <span class="text-danger" *ngIf="loginForm.controls['Password'].dirty && loginForm.hasError('required','Password')">*Password is required</span>
                             
                     </div>
-                    <button type="submit" [disabled]="!loginForm.valid" class="btn btn-primary">Login</button>
+                    <button [disabled]="!loginForm.valid" type="submit" class="btn btn-primary">Login</button>
                 </form>
+               <div class="d-flex justify-content-end">
                 <a routerLink='/UserSignup'>New User? Click to Sign Up</a>
-
+               </div>
             </div>
         </div>
     </div>

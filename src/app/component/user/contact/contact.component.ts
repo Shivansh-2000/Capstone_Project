@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ApiService } from 'src/app/Services/api.service';
-import { contactModel } from './contact.modulas';
+import { contactModel } from 'src/app/models/contact.module';
 
 @Component({
   selector: 'app-contact',
