@@ -18,8 +18,8 @@ export class AdminProfileComponent implements OnInit {
 
   ngOnInit(): void {
     this.formValue = this.formbuilder.group({
-      email : ['',[Validators.required]],
-      password : ['',[Validators.required]],
+      adminEmail : ['',[Validators.required]],
+      adminPassword : ['',[Validators.required]],
     }) 
     this.getAllAdmin();
   }
@@ -30,8 +30,8 @@ export class AdminProfileComponent implements OnInit {
   }
 
   postAdminDetail(){
-    this.adminProfileModelObj.email = this.formValue.value.email;
-    this.adminProfileModelObj.password = this.formValue.value.password;
+    this.adminProfileModelObj.adminEmail = this.formValue.value.adminEmail;
+    this.adminProfileModelObj.adminPassword = this.formValue.value.adminPassword;
    
     this.api.postAdmin(this.adminProfileModelObj)
     .subscribe(res=>{
@@ -47,14 +47,16 @@ export class AdminProfileComponent implements OnInit {
     })
   }
   getAllAdmin(){
-    this.api.getUser()
+    this.api.getAdmin()
     .subscribe(res=>{
       this.adminProfileData = res;
+    },err=>{
+      alert("Something went wrong")
     })
   }
 
   deleteAdmin(admin:any){
-    this.api.deleteUser(admin.id)
+    this.api.deleteAdmin(admin.id)
     .subscribe(res=>{
       alert("admin Deleted");
       this.getAllAdmin();
@@ -66,15 +68,15 @@ export class AdminProfileComponent implements OnInit {
   onEdit(admin : any){
     this.showAdd = false;
   this.showUpdate = true;
-    this.adminProfileModelObj.adminId = admin.id;
-    this.formValue.controls['email'].setValue(admin.email);
-    this.formValue.controls['password'].setValue(admin.password);
+    this.adminProfileModelObj.id = admin.id;
+    this.formValue.controls['adminEmail'].setValue(admin.adminEmail);
+    this.formValue.controls['adminPassword'].setValue(admin.adminPassword);
   }
   UpdateAdminDetail(){
-    this.adminProfileModelObj.email = this.formValue.value.email;
-    this.adminProfileModelObj.password = this.formValue.value.password;
+    this.adminProfileModelObj.adminEmail = this.formValue.value.adminEmail;
+    this.adminProfileModelObj.adminPassword = this.formValue.value.adminPassword;
    
-    this.api.updateAdmin(this.adminProfileModelObj,this.adminProfileModelObj.adminId)
+    this.api.updateAdmin(this.adminProfileModelObj,this.adminProfileModelObj.id)
     .subscribe(res=>{
       alert("Updated Successfully");
       let ref = document.getElementById('cancel');

@@ -2,7 +2,27 @@
   "posts": [
     {
       "id": 1,
-      "catName": "bikee"
+      "catName": "Brake&Clutch"
+    },
+    {
+      "id": 2,
+      "catName": "Engine&Electrical"
+    },
+    {
+      "id": 3,
+      "catName": "Bike Body Parts"
+    },
+    {
+      "id": 4,
+      "catName": "Accessories"
+    },
+    {
+      "id": 5,
+      "catName": "Air Conditioning"
+    },
+    {
+      "id": 6,
+      "catName": "Exhaust System"
     }
   ],
   "comments": [],

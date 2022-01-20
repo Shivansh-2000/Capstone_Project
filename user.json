@@ -1,19 +1,17 @@
 {
   "posts": [
     {
-      "userId": 2,
       "FirstName": "Shivansh",
       "LastName": "Sharma",
       "Email": "shivansh@gmail.com",
-      "Password": "shivansh",
+      "Password": "Shivansh",
       "id": 1
     },
     {
-      "userId": 2,
-      "FirstName": "Kajal",
+      "FirstName": "kajal",
       "LastName": "Rajput",
       "Email": "kajal@gmail.com",
-      "Password": "kajal",
+      "Password": "Kajal!@#",
       "id": 2
     }
   ],

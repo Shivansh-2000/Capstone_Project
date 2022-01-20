@@ -47,7 +47,7 @@
                         <div class="input-box">
                             <input required class="form-control" id="name" type="text" placeholder="Full Name"
                                 formControlName="fullName">
-                            <span class="error" *ngIf="fullName?.invalid && fullName?.touched">Name is required</span>
+                            <span class="error" *ngIf="fullName?.invalid && fullName?.touched">*Name is required</span>
                         </div>
                     </div>
                     <!-- email -->
@@ -56,8 +56,8 @@
                         <div class="input-box">
                             <input required class="form-control" id="emailAddress" type="text"
                                 placeholder="Email Address" formControlName="email" type="text" placeholder="Email">
-                            <span class="error" *ngIf="email?.invalid && email?.touched">E-mail is invalid</span>
-                            <span class="valid" *ngIf="email?.valid && email?.touched">E-mail is valid</span>
+                            <span class="error" *ngIf="email?.invalid && email?.touched">*E-mail is invalid</span>
+                            <span class="valid" *ngIf="email?.valid && email?.touched">*E-mail is valid</span>
                         </div>
                     </div>
                     <!-- phone number -->
@@ -66,8 +66,8 @@
                         <div class="input-box">
                             <input required class="form-control" id="phone" type="text"
                                 placeholder="Phone Number: +91-XXXXXXXXXX" formControlName="phoneNo">
-                            <span class="error" *ngIf="phoneNo?.invalid && phoneNo?.touched">Enter 10 digit number.</span>
-                            <span class="valid" *ngIf="phoneNo?.valid">Enter number in valid</span>
+                            <span class="error" *ngIf="phoneNo?.invalid && phoneNo?.touched">*Enter 10 digit number.</span>
+                            <span class="valid" *ngIf="phoneNo?.valid">*Enter number in valid</span>
                         </div>
                     </div>
                     <div class="info">

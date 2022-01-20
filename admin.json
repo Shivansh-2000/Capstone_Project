@@ -1,18 +1,9 @@
 {
-  "posts": [
-    {
-      "adminId": 0,
+  "posts": [{
       "adminEmail": "shivansh@gmail.com",
-      "adminPassword": "123456",
+      "adminPassword": "Shivansh",
       "id": 1
-    },
-    {
-      "adminId": 2,
-      "adminEmail": "kajal200@gmail.com",
-      "adminPassword": "234098",
-      "id": 2
-    }
-  ],
+  }],
   "comments": [],
   "profile": {
     "name": "typicode"

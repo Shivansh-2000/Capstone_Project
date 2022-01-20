@@ -1,5 +1,5 @@
 export class adminProfileModel{
-    adminId : number = 0;
-    email : string = '';
-    password : string = '';
+    id : number = 0;
+    adminEmail : string = '';
+    adminPassword : string = '';
 }

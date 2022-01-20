@@ -26,8 +26,8 @@ export class AdminLoginComponent implements OnInit {
 
   
   adminlogin(){
-      this.adminProfileModelObj.email= this.adminloginForm.value.email;
-      this.adminProfileModelObj.password= this.adminloginForm.value.Password;
+      this.adminProfileModelObj.adminEmail= this.adminloginForm.value.email;
+      this.adminProfileModelObj.adminPassword= this.adminloginForm.value.Password;
       this.api.login(this.adminProfileModelObj)
     .subscribe(res=>{
       alert("Login Successfully!!");

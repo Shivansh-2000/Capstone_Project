@@ -3,34 +3,50 @@
     {
       "id": 1,
       "image": "https://cdn.shopify.com/s/files/1/0415/7846/3390/products/mukut-front-brake-disc-caliper-for-honda-shine-new-135_1024x.jpg?v=1631362057",
-      "productName": "Brake",
+      "productName": "Brake for ",
       "productDescription": "brake",
-      "catName": "brake",
+      "catName": "Brake&Clutch",
       "productPrice": "2345"
     },
     {
       "id": 2,
       "image": "https://i.pinimg.com/originals/db/62/5e/db625e03827d9918847c53c7fce2b3ba.jpg",
-      "productName": "Body",
-      "productDescription": "Body",
+      "productName": "Bike Body",
+      "productDescription": " Stainless Steel Body",
       "catName": "Bike Body Parts",
-      "productPrice": "200"
+      "productPrice": "6000"
     },
     {
       "id": 3,
       "image": "https://www.mahle.com/media/global/press/press-pictures/products/mahle-klimageraet-fuer-pkw_textimage.jpg",
       "productName": "Air Conditioning",
-      "productDescription": "Air conditioning",
-      "catName": "Air conditioning",
-      "productPrice": "300"
+      "productDescription": "Air conditioning for car",
+      "catName": "Air Conditioning",
+      "productPrice": "3000"
     },
     {
       "id": 4,
       "image": "https://rukminim1.flixcart.com/image/416/416/jw84ya80/bike-exhaust-system/u/7/z/universal-high-quality-high-performance-2-pipe-trp-traders-original-imafdk6pebvdmbfc.jpeg?q=70",
-      "productName": "Exhaust",
-      "productDescription": "Exhaust System",
+      "productName": "Exhaust for bike",
+      "productDescription": "2 pipe Exhaust System ",
       "catName": "Exhaust System",
       "productPrice": "5000"
+    },
+    {
+      "id": 5,
+      "image": "https://assetscdn1.paytm.com/images/catalog/product/A/AU/AUTLOCK-CHAIN-SWEBD999530135594E7/1567505356834_0..jpg?imwidth=282&impolicy=hq",
+      "productName": "Lock",
+      "productDescription": "For locking helmet with bike",
+      "catName": "Accessories",
+      "productPrice": "200"
+    },
+    {
+      "id": 6,
+      "image": "https://rukminim1.flixcart.com/image/416/416/kebpqq80/vehicle-indicator-light/w/g/9/blue-drl-running-indicator-autopowerz-original-imafvyhmrzz6fj8r.jpeg?q=70",
+      "productName": "LED Indicator",
+      "productDescription": "Rear/Front bike indcator",
+      "catName": "Engine&Electrical",
+      "productPrice": "300"
     }
   ],
   "comments": [],
